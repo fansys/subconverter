@@ -126,8 +126,8 @@ bool applyMatcher(const std::string &rule, std::string &real_rule, const Proxy &
                                                             {ProxyType::SOCKS5,       "SOCKS5"},
                                                             {ProxyType::WireGuard,    "WIREGUARD"},
                                                             {ProxyType::VLESS,        "VLESS"},
-                                                            {ProxyType::HYSTERIA,     "HYSTERIA"},
-                                                            {ProxyType::HYSTERIA2,    "HYSTERIA2"}};
+                                                            {ProxyType::Hysteria,     "HYSTERIA"},
+                                                            {ProxyType::Hysteria2,    "HYSTERIA2"}};
     if(startsWith(rule, "!!GROUP="))
     {
         regGetMatch(rule, group_regex, 3, 0, &target, &ret_real_rule);
