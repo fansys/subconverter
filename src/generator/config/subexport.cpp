@@ -1577,6 +1577,21 @@ void proxyToQuanX(std::vector<Proxy> &nodes, INIReader &ini, std::vector<Ruleset
                 }
             }
             break;
+        case ProxyType::VLESS:
+            proxyStr = "vless = " + hostname + ":" + port + ", method=none, password=" + id;
+            if(tlssecure && !tls13.is_undef())
+                proxyStr += ", tls13=" + std::string(tls13 ? "true" : "false");
+            if(transproto == "ws")
+            {
+                if(tlssecure)
+                    proxyStr += ", obfs=wss";
+                else
+                    proxyStr += ", obfs=ws";
+                proxyStr += ", obfs-host=" + host + ", obfs-uri=" + path;
+            }
+            else if(tlssecure)
+                proxyStr += ", obfs=over-tls, obfs-host=" + host;
+            break;
         default:
             continue;
         }
