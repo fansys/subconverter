@@ -82,12 +82,18 @@ struct Proxy
     String FakeType;
     bool TLSSecure = false;
 
+    String Flow;
+    bool FlowShow = false;
+
     String Host;
     String Path;
     String Edge;
 
     String QUICSecure;
     String QUICSecret;
+
+    String GRPCServiceName;
+    String GRPCMode;
 
     tribool UDP;
     tribool XUDP;
