@@ -98,6 +98,18 @@ struct Proxy
     uint16_t SnellVersion = 0;
     String ServerName;
 
+    String Auth;
+    String Alpn;
+    String UpMbps;
+    String DownMbps;
+    String Insecure;
+
+    String Fingerprint;
+    String PublicKey;
+    String ShortId;
+
+    String OBFSPassword;
+
     String SelfIP;
     String SelfIPv6;
     String PublicKey;
