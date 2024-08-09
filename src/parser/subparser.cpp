@@ -1071,7 +1071,7 @@ void explodeClash(Node yamlnode, std::vector<Proxy> &nodes)
     std::string flow, mode; //trojan
     std::string user; //socks
     std::string ip, ipv6, private_key, public_key, mtu; //wireguard
-    std::string auth, up, down, obfsParam, insecure;//hysteria
+    std::string auth, up, down, obfsParam, insecure, alpn;//hysteria
     std::string obfsPassword;//hysteria2
     string_array dns_server;
     tribool udp, tfo, scv;
