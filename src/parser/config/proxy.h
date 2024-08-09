@@ -105,7 +105,6 @@ struct Proxy
     String Insecure;
 
     String Fingerprint;
-    String PublicKey;
     String ShortId;
 
     String OBFSPassword;
