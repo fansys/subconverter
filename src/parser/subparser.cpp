@@ -1065,10 +1065,14 @@ void explodeClash(Node yamlnode, std::vector<Proxy> &nodes)
 {
     std::string proxytype, ps, server, port, cipher, group, password; //common
     std::string type = "none", id, aid = "0", net = "tcp", path, host, edge, tls, sni; //vmess
+    std::string fp="chrome", pbk, sid; //vless
     std::string plugin, pluginopts, pluginopts_mode, pluginopts_host, pluginopts_mux; //ss
     std::string protocol, protoparam, obfs, obfsparam; //ssr
+    std::string flow, mode; //trojan
     std::string user; //socks
     std::string ip, ipv6, private_key, public_key, mtu; //wireguard
+    std::string auth, up, down, obfsParam, insecure;//hysteria
+    std::string obfsPassword;//hysteria2
     string_array dns_server;
     tribool udp, tfo, scv;
     Node singleproxy;
